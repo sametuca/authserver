@@ -14,9 +14,10 @@ namespace SharedLibrary.Dtos
         public static Response<T> Success(T data,int statusCode=200)
         {
             return new Response<T> { Data = data, 
-                StatusCode = statusCode,IsSuccessful=true };
+                StatusCode = statusCode,
+                IsSuccessful=true
+            };
         }
-
         public static Response<T> Success(int statusCode=200)
         {
             return new Response<T> { Data = default, StatusCode = statusCode, IsSuccessful = true };    
@@ -33,6 +34,7 @@ namespace SharedLibrary.Dtos
             return new Response<T> { Error = errorDto, StatusCode = statusCode, IsSuccessful = false };
         }
 
-
     }
+
+
 }
